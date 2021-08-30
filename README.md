@@ -1,10 +1,10 @@
 # woowUp
 Ejercicios del Test
 
-developed PHP 7.4 with PHPUnit 9.5.8
+developed PHP 7.4.0 | Apache 2.4 | PHPUnit 9.5.8
 
-1-install composer
-2-composer require --dev phpunit/phpunit ^9 
+1- install composer
+2- composer require --dev phpunit/phpunit ^9 
 
 
 Ejercicio 1: Subir la escalera
