@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+  www:
+    build: .
+    ports:
+      - 8080:80
+    volumes:
+      - ./www:/var/www/html/
+volumes:
+  persistent:      
