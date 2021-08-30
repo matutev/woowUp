@@ -1,0 +1,42 @@
+body:not(.table-condensed){
+    background-color: #385473;
+    color: white;
+}
+
+.title{
+ font-size: 30px;
+ font-weight: bold;
+ text-align: center;
+  margin-top: 20px;
+}
+
+.subTitle{
+ font-size: 18px;
+ font-weight: bold;
+ text-align: center;
+ margin-top: 20px;
+ margin-bottom: 40px;
+}
+
+.choiceList{
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+}
+
+.error{
+    color: red;
+}
+
+.container-result{
+   margin-top: 40px;
+   font-size: 20px;
+}
+
+.posibility-number{
+   font-size: 30px; 
+}
+
+.table-striped{
+    background-color: white;
+    font-size: 17px;
+}

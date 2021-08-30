@@ -1,0 +1,39 @@
+<?php
+namespace src\exercise2\controller;
+
+use src\DefaultController;
+use src\exercise2\repository\ComprasClientesRepository;
+
+require_once $_SERVER['DOCUMENT_ROOT'].'/'.($_SERVER['HTTP_HOST'] == 'localhost'? 'woowUp/' : '').'src/DefaultController.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/'.($_SERVER['HTTP_HOST'] == 'localhost'? 'woowUp/' : '').'src/exercise2/repository/ComprasClientesRepository.php';
+
+    
+class ComprasClientesController extends DefaultController{
+    
+    public  $resultados = null;
+    public  $error = '';
+
+    public function __construct() {
+       parent::__construct(); 
+       $this->getComprasClientes();
+      
+       //RENDERIZAR VISTA
+       $this->render($_SERVER['DOCUMENT_ROOT'].'/'.($_SERVER['HTTP_HOST'] == 'localhost'? 'woowUp' : '').'/views/exercise2/exercise2.php');
+    }
+    
+    /**
+     * llama al repositorio ComprasClientes para calcular las fechas recompra del cliente o un error si no puedo leer el json del cliente
+     */
+    private function getComprasClientes(){
+        $comprasClientesRepository = new ComprasClientesRepository();
+        $comprasClientes = $comprasClientesRepository->getFechasRecompraPorProducto();
+        if(is_object($comprasClientes)){
+            $this->resultados = $comprasClientes;
+        }else{
+            $this->error = $comprasClientes;
+        }
+    }
+    
+}
+
+new ComprasClientesController();
