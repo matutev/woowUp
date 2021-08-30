@@ -6,7 +6,7 @@ class Escalera extends Base{
   }
 
   getPosibilidadesEscalera(nroEscalones){
-    this.ajaxCall('json', 'POST', this.baseUrl+'/src/exercise1/controller/EscaleraController.php', {nroEscalones:nroEscalones, action: 'getPosibilidadesEscalera'}, "getResultado", "getError");
+    this.ajaxCall('json', 'POST', null, {nroEscalones:nroEscalones, action: 'getPosibilidadesEscalera'}, "getResultado", "getError");
   }
   
   getResultado(json){
