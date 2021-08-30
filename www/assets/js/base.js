@@ -2,7 +2,6 @@ class Base{
     constructor(controller = ""){
         this.getUrl  = window.location;
         this.baseUrl = this.getUrl .protocol + "//" + this.getUrl.host + "/" + this.getUrl.pathname.split('/')[1];
-        this.baseUrl = this.baseUrl + (this.baseUrl.indexOf('localhost') >= 0 ? '/www': '');
         this.controller = controller;
     }
     
