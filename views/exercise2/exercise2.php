@@ -44,8 +44,9 @@
                     <?php $i++; } ?>
                     </tbody>
                 </table>
-            <?php  } ?>
-            <?= !empty($this->error)? $this->error: ''; ?>
+            <?php  }else{ ?>
+                No se ha podido leer el archivo
+            <?php } ?>
             </div>
             <div class="col-8 text-right"> <a href="<?=$this->base_assets?>index.php" class="btn btn-dark">Atras</a></div>
         </div>                                       

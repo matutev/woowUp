@@ -10,8 +10,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/'.($_SERVER['HTTP_HOST'] == 'localhost'
     
 class EscaleraController extends DefaultController{
     
-    public  $resultado = 0;
-    public  $error = '';
+    public  $resultado = null;
 
     public function __construct() {
        parent::__construct(); 
@@ -32,11 +31,7 @@ class EscaleraController extends DefaultController{
     private function getPosibilidadesEscalera(string $nroEscalones){
         $escaleraRepository = new EscaleraRepository();
         $resPosibilidades = $escaleraRepository->getPosibilidades($nroEscalones);
-        if(is_numeric($resPosibilidades)){
-            $this->resultado = $resPosibilidades;
-        }else{
-            $this->error = $resPosibilidades;
-        }
+        $this->resultado = $resPosibilidades;
     }
     
 }

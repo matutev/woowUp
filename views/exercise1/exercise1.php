@@ -28,7 +28,7 @@
                     <button type="submit" name="form[action]" value="getPosibilidadesEscalera" class="btn btn-success">Enviar</button>
                      <a href="<?=$this->base_assets?>index.php" class="btn btn-dark">Atras</a>
                 </div>
-                <div class="col-8 container-result"><?=  isset($_POST['form'])? (!empty($this->resultado)? 'Numero de posibilidades <span class="posibility-number">'.$this->resultado.'<span>' : '<span class="error">'.$this->error.'</span>') : ''; ?> </div>
+                <div class="col-8 container-result"><?=  isset($_POST['form'])? (!empty($this->resultado)? 'Numero de posibilidades <span class="posibility-number">'.$this->resultado.'<span>' : '<span class="error">No es un numero valido.</span>') : ''; ?> </div>
             </div>              
         </form>                       
     </div>

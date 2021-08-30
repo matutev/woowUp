@@ -11,7 +11,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/'.($_SERVER['HTTP_HOST'] == 'localhost'
 class ComprasClientesController extends DefaultController{
     
     public  $resultados = null;
-    public  $error = '';
 
     public function __construct() {
        parent::__construct(); 
@@ -27,11 +26,7 @@ class ComprasClientesController extends DefaultController{
     private function getComprasClientes(){
         $comprasClientesRepository = new ComprasClientesRepository();
         $comprasClientes = $comprasClientesRepository->getFechasRecompraPorProducto();
-        if(is_object($comprasClientes)){
-            $this->resultados = $comprasClientes;
-        }else{
-            $this->error = $comprasClientes;
-        }
+        $this->resultados = $comprasClientes;
     }
     
 }

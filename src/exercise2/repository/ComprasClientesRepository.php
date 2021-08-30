@@ -19,7 +19,7 @@ class ComprasClientesRepository{
     public function getFechasRecompraPorProducto(): ComprasClientes{       
         $comprasCliente = $this->getArrayCompras();
         if(!is_array($comprasCliente)){
-            return 'No se ha podido leer el archivo';
+            return false;
         }
         //Obtiene todas las fechas de compras por sku
         $comprasPorSku = [];
