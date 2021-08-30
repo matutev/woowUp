@@ -6,8 +6,8 @@ use DateTime;
 use src\exercise2\entity\CompraCliente;
 use src\exercise2\entity\ComprasClientes;
 
-require_once $_SERVER['DOCUMENT_ROOT'].'/'.($_SERVER['HTTP_HOST'] == 'localhost'? 'woowUp/' : '').'src/exercise2/entity/ComprasClientes.php';
-require_once $_SERVER['DOCUMENT_ROOT'].'/'.($_SERVER['HTTP_HOST'] == 'localhost'? 'woowUp/' : '').'src/exercise2/entity/CompraCliente.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/'.($_SERVER['HTTP_HOST'] == 'localhost'? 'woowUp/www/' : '').'src/exercise2/entity/ComprasClientes.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/'.($_SERVER['HTTP_HOST'] == 'localhost'? 'woowUp/www/' : '').'src/exercise2/entity/CompraCliente.php';
 
 class ComprasClientesRepository{
     

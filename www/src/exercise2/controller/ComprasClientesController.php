@@ -4,8 +4,8 @@ namespace src\exercise2\controller;
 use src\DefaultController;
 use src\exercise2\repository\ComprasClientesRepository;
 
-require_once $_SERVER['DOCUMENT_ROOT'].'/'.($_SERVER['HTTP_HOST'] == 'localhost'? 'woowUp/' : '').'src/DefaultController.php';
-require_once $_SERVER['DOCUMENT_ROOT'].'/'.($_SERVER['HTTP_HOST'] == 'localhost'? 'woowUp/' : '').'src/exercise2/repository/ComprasClientesRepository.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/'.($_SERVER['HTTP_HOST'] == 'localhost'? 'woowUp/www/' : '').'src/DefaultController.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/'.($_SERVER['HTTP_HOST'] == 'localhost'? 'woowUp/www/' : '').'src/exercise2/repository/ComprasClientesRepository.php';
 
     
 class ComprasClientesController extends DefaultController{
@@ -17,7 +17,7 @@ class ComprasClientesController extends DefaultController{
        $this->getComprasClientes();
       
        //RENDERIZAR VISTA
-       $this->render($_SERVER['DOCUMENT_ROOT'].'/'.($_SERVER['HTTP_HOST'] == 'localhost'? 'woowUp' : '').'/views/exercise2/exercise2.php');
+       $this->render($_SERVER['DOCUMENT_ROOT'].'/'.($_SERVER['HTTP_HOST'] == 'localhost'? 'woowUp/www/' : '').'views/exercise2/exercise2.php');
     }
     
     /**

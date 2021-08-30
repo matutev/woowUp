@@ -9,14 +9,14 @@ class EscaleraRepository{
      * Devuelve las posibilidades de subir la escalera de $nroEscalones escalones o un mensaje de error si $nroEscalones es incorrecto
      * 
      * @param string $nroEscalones
-     * @return string|integer
+     * @return boolean|integer
      */
     public function getPosibilidades(string $nroEscalones){ 
         if(!ctype_digit($nroEscalones)  || (ctype_digit($nroEscalones) &&  $nroEscalones <= 1)){
             return  false;
         }
 
-        return $this->getContadorPosibilidades($nroEscalones + 1);
+        return $this->getContadorPosibilidades($nroEscalones);
     }
     
     /**
@@ -26,10 +26,19 @@ class EscaleraRepository{
      * @return integer
      */
     private function getContadorPosibilidades($nroEscalones){
-        if ($nroEscalones <= 1){
-            return $nroEscalones; 
+        if ($nroEscalones < 3){
+          return $nroEscalones;  
+        } 
+        $subirUno = 1;
+        $subirDos = 2;
+        for ($i = 2; $i < $nroEscalones; $i++) {
+          $actual  = $subirUno + $subirDos;
+          
+          $subirUno = $subirDos;
+          $subirDos = $actual;
         }
-        return $this->getContadorPosibilidades($nroEscalones - 1) + $this->getContadorPosibilidades($nroEscalones - 2);
+
+        return $subirDos;
     }
 
 }
