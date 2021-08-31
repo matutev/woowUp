@@ -40,6 +40,7 @@ Para obtener la fecha de recompra de un producto: hay que analizar cada cuanto t
 - Composer
 - PhpUnit 9.5.8
 - Bootstrap 4.5.0
+- jQuery v3.5.1
 
 ## Setup
 1. clone this repository https://github.com/matutev/woowUp.git
