@@ -48,10 +48,14 @@ Para obtener la fecha de recompra de un producto: hay que analizar cada cuanto t
 3. open "localhost:8080" in your favorite browser 
 
 ## Test
-Here are the test that are going to run when you execute the PHPunit tests command:
+Here are the test that are going to run when you execute the PHPunit command:
 - testGetPosibilidadesConEnteros
 - testGetPosibilidadesConNull
 - testGetPosibilidadesConNegativos
+
+1. go to main project folder and run "docker exec -it woowup_www_1 bash" to enter the virtual machine 
+2. run composer update
+3. and after composer finishes run vendor/bin/phpunit tests
 
 
 
